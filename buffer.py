@@ -11,3 +11,5 @@ class Buffer:
 
         return self.buffer_list
 
+    def clear_buffer(self) -> None:
+        self.buffer_list = []
