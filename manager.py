@@ -25,7 +25,8 @@ class Manager:
                     self.save_to_file()
                 case "Odczytaj z pliku":
                     self.load_from_file()
-
+                case "Pokaż wykaz dzisiejszych operacji":
+                    print(self.buffer.get_all_buffer())
                 case "Zakończenie programu":
                     sys.exit("Wybrane zakończenie działania programu")
                 case _:
