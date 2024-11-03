@@ -23,6 +23,8 @@ class Manager:
                     self.cipher_text("decrypted")
                 case "Zapisz do pliku":
                     self.save_to_file()
+                case "Odczytaj z pliku":
+                    self.load_from_file()
 
                 case "Zakończenie programu":
                     sys.exit("Wybrane zakończenie działania programu")
@@ -75,3 +77,12 @@ class Manager:
         self.buffer.clear_buffer()
         self.file_handler.write_file(file_name, data)
 
+    def load_from_file(self):
+        file_name = input("Podaj nazwę pliku do odczytu: ")
+        data = self.file_handler.read_file(file_name)
+        if data:
+            if isinstance(data, list):
+                for position in data:
+                    print(position)
+            else:
+                print(data)
