@@ -11,3 +11,12 @@ class Menu:
             "Pokaż wykaz dzisiejszych operacji",
             "Zakończenie programu"
         ]
+        self.source_menu = [
+            "Dane z pliku",
+            "Dane wprowadzone ręcznie"
+        ]
+        self.rot_menu = [
+            "rot13",
+            "rot47"
+        ]
+
