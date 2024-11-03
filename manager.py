@@ -19,6 +19,8 @@ class Manager:
             match choice:
                 case "Zaszyfruj dane":
                     self.cipher_text("encrypted")
+                case "Odszyfruj dane":
+                    self.cipher_text("decrypted")
 
                 case "Zakończenie programu":
                     sys.exit("Wybrane zakończenie działania programu")
