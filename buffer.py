@@ -2,7 +2,7 @@ class Buffer:
     def __init__(self):
         self.buffer_list = []
 
-    def add_buffer(self, text_json: dict[str]) -> None:
+    def add_buffer(self, text_json) -> None:
         self.buffer_list.append(text_json)
 
     def get_all_buffer(self) -> [str, list]:
