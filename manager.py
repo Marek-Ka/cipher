@@ -21,6 +21,8 @@ class Manager:
                     self.cipher_text("encrypted")
                 case "Odszyfruj dane":
                     self.cipher_text("decrypted")
+                case "Zapisz do pliku":
+                    self.save_to_file()
 
                 case "Zakończenie programu":
                     sys.exit("Wybrane zakończenie działania programu")
@@ -66,4 +68,10 @@ class Manager:
                 data = input("Wprowadź tekst do zaszyfrowania: ")
                 text_json = self.prepare_cipher_json_data(data, status)
                 self.buffer.add_buffer(text_json)
+
+    def save_to_file(self) -> None:
+        file_name = input("Podaj nazwę pliku z rozszerzeniem '.json': ")
+        data = self.buffer.get_all_buffer()
+        self.buffer.clear_buffer()
+        self.file_handler.write_file(file_name, data)
 
